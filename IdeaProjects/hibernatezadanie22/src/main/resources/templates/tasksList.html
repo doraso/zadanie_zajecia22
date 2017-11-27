@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Lista wszystkich zadań</title>
+</head>
+<body>
+<p th:each="task:${taskList}">
+<td th:text="${task.id}"></td>
+<td th:text="${task.name}"></td>
+<td th:text="${task.finished}"></td>
+</p>
+<a href="/">Powrót do strony głównej</a>
+</body>
+</html>

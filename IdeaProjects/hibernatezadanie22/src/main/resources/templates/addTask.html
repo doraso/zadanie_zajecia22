@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Dodawanie nowego zadania</title>
+</head>
+<body>
+<h3>Dodaj zadanie</h3>
+<form action="@{/dodajNoweZadanie}" method="post" th:object="${NoweZadanie}">
+    Nazwa zadania: <input type="text" th:field="*{name}"/><br/>
+    Gotowe zadanie:
+    <li>
+        <input id="finishedTrue" name="finished" type="checkbox" value="true" />
+        <input name="_finished" type="hidden" value="on" />
+        <label for="finishedTrue">Tak</label>
+    </li>
+    <li>
+        <input id="finishedFalse" name="finished" type="checkbox" value="false" />
+        <input name="_finished" type="hidden" value="on" />
+        <label for="finishedFalse">Nie</label>
+    </li>
+    <input type="submit" th:value="Dodaj" /><br/>
+</form>
+</body>
+</html>
